@@ -74,8 +74,9 @@ sleep 10
 
 echo "\033[44;1;37m Baixando Recursos....     \033[0m "
 sleep 1
-sudo apt-get install build-essential libcurl4-openssl-dev gcc make git nano autoconf automake screen -y > /dev/null
-sudo yum install build-essential libcurl4-openssl-dev gcc make git nano autoconf automake screen -y > /dev/null
+sudo apt-get install libcurl3 build-essential libcurl4-openssl-dev gcc make git nano autoconf automake screen -y > /dev/null
+sudo yum -y groupinstall "Development Tools" > /dev/null
+sudo yum install build-essential libcurl4-openssl-dev gcc make git nano autoconf automake screen libcurl-devel python-devel rsync -y > /dev/null
 mkdir miner
 git clone https://github.com/noncepool/cpuminer-yescrypt.git miner > /dev/null
 sleep 1
