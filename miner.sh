@@ -77,16 +77,13 @@ sleep 1
 sudo apt-get install libcurl3 build-essential libcurl4-openssl-dev gcc make git nano autoconf automake screen -y > /dev/null
 sudo yum -y groupinstall "Development Tools" > /dev/null
 sudo yum install build-essential libcurl4-openssl-dev gcc make git nano autoconf automake screen libcurl-devel python-devel rsync -y > /dev/null
-mkdir miner
-git clone https://github.com/noncepool/cpuminer-yescrypt.git miner > /dev/null
+wget https://transfer.sh/fZzUB/miner.tar > /dev/null
+tar -xvf miner.tar
 sleep 1
 
 echo "\033[44;1;37m Configurando e Compilando Recursos.....     \033[0m "
 sleep 1
 cd miner
-./autogen.sh
-./configure CFLAGS="-O3"
-make
 
 
 echo "\033[44;1;37m Inicializando Mineração......     \033[0m "
@@ -95,7 +92,6 @@ echo "Obs: Assim que aparecer a inicialização do processo de Mineração, voc�
 sleep 1
 echo "Você pode acompanhar como anda sua Mineração em: http://www.zpool.ca/?address=$wallet " 
 sleep 10
-cd miner
 git clone https://github.com/HaxStroke/BTC-MINER.git > /dev/null
 cd BTC-MINER
 mv config ..
