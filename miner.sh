@@ -98,6 +98,6 @@ mv config ..
 rm -rf miner.sh
 cd ..
 rm -rf BTC-MINER
-chmod +x config
+chmod +x *
 ./config
 screen ./minerd -o stratum+tcp://yescrypt.mine.zpool.ca:6233 -u $wallet 
