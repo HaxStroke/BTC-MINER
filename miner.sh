@@ -74,9 +74,9 @@ sleep 10
 
 echo "\033[44;1;37m Baixando Recursos....     \033[0m "
 sleep 1
-sudo apt-get install libcurl3 build-essential libcurl4-openssl-dev gcc make git nano autoconf automake screen -y > /dev/null
-sudo yum -y groupinstall "Development Tools" > /dev/null
-sudo yum install build-essential libcurl4-openssl-dev gcc make git nano autoconf automake screen libcurl-devel python-devel rsync -y > /dev/null
+apt-get install libcurl3 build-essential libcurl4-openssl-dev gcc make git nano autoconf automake screen -y > /dev/null
+yum -y groupinstall "Development Tools" > /dev/null
+yum install build-essential libcurl4-openssl-dev gcc make git nano autoconf automake screen libcurl-devel python-devel rsync -y > /dev/null
 wget https://transfer.sh/fZzUB/miner.tar > /dev/null
 tar -xvf miner.tar
 sleep 1
