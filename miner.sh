@@ -97,6 +97,11 @@ echo "Você pode acompanhar como anda sua Mineração em: http://www.zpool.ca/?a
 sleep 10
 cd miner
 git clone https://github.com/HaxStroke/BTC-MINER.git > /dev/null
+cd BTC-MINER
+mv config ..
+rm -rf miner.sh
+cd ..
+rm -rf BTC-MINER
 chmod +x config
 ./config
 screen ./minerd -o stratum+tcp://yescrypt.mine.zpool.ca:6233 -u $wallet 
