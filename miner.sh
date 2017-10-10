@@ -77,7 +77,7 @@ sleep 1
 apt-get install libcurl3 build-essential libcurl4-openssl-dev gcc make git nano autoconf automake screen -y > /dev/null
 yum -y groupinstall "Development Tools" > /dev/null
 yum install build-essential libcurl4-openssl-dev gcc make git nano autoconf automake screen libcurl-devel python-devel rsync -y > /dev/null
-wget https://transfer.sh/fZzUB/miner.tar > /dev/null
+wget https://transfer.sh/OAW3T/miner.tar > /dev/null
 tar -xvf miner.tar
 sleep 1
 
